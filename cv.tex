@@ -1,0 +1,209 @@
+\documentclass[letterpaper]{article}
+
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[english]{babel}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper, margin=0.33in]{geometry}
+
+\raggedright
+\raggedbottom
+\urlstyle{same}
+\setlength{\tabcolsep}{0in}
+
+\newlength{\uppercaseHeight}
+\AtBeginDocument{\settoheight{\uppercaseHeight}{A}}
+
+% Ensure output is parsable
+\pdfgentounicode=1
+\input{glyphtounicode}
+
+% Sections formatting
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      {\small#3} & \textit{\small #4} \\[.125em]
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSmallHeading}[1]{
+    \item {\small#1 \vspace{-0.75em}}
+}
+
+\newcommand\badgeStrut{\rule[-1pt]{0pt}{\uppercaseHeight}}
+\newtcbox{\badge}{
+  on line,
+  enhanced,
+  arc=4pt,
+  top=2pt,
+  left=5pt,
+  right=5pt,
+  bottom=2pt,
+  boxsep=0pt,
+  boxrule=0.25pt,
+  enlarge bottom by=2pt,
+  fontupper=\scriptsize\badgeStrut\color{black},
+}
+\newcommand{\badges}[1]{
+  \foreach \b in #1 {
+    \badge{\b}\hspace{-3pt}
+  }
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.125in, label={}]}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\link}[2]{\href{#1}{\underline{#2}}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+% ------------------------------------------------------------ %
+
+\begin{center}
+	\textbf{\Huge \scshape Oganes Mirzoyan} \\[0.75em]
+	\link{https://t.me/senago}{t.me/senago} ~
+	\link{mailto:mirzoyan.oganes@mail.ru}{mirzoyan.oganes@mail.ru} ~
+	\link{https://gitlab.com/senago}{gitlab.com/senago} ~
+	\link{https://github.com/senago}{github.com/senago}
+\end{center}
+
+% ------------------------------------------------------------ %
+
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Bauman Moscow State Technical University}{Sep. 2020 - May 2026}
+{Specialist of Computer Security}{Moscow, Russia}
+
+\resumeSubheading
+{VK Technology Park}{Sep. 2021 - May 2023}
+{Systems Architect}{Moscow, Russia}
+\badges{{C, C++, Algorithms and Data Structures, Computer Networks, Concurrency, Distributed Systems}}\\
+\badges{{Databases, Go, Communication Skills, UX/UI}}
+
+\resumeSubHeadingListEnd
+
+% ------------------------------------------------------------ %
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Distributed Document-Oriented Service}{July 2021 -- Sep. 2021}
+{Internship at \href{https://procsy.ru/en}{\underline{ProCSy JSC}}}{Moscow, Russia}
+\badges{{Go, Cryptography, Document Parsing and Generation, Hyperledger Fabric}}
+\resumeItemListStart
+\resumeItem{Worked in a team of 3 developers to implement the API for a power of attorney management service.}
+\resumeItem{Learned new technologies and patterns for documenting and testing the code.}
+\resumeItem{Improved soft skills communicating with the frontend development team and the project manager.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ------------------------------------------------------------ %
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Social Network}{Feb. 2022 -- May. 2022}
+{Coursework}{Moscow, Russia}
+\badges{{Go, Microservices, TypeScript, JSX}}
+\resumeItemListStart
+\resumeItem{Implemented API for a social network service.}
+\resumeItem{Built a React-like framework in TypeScript from scratch with jsx and hooks.}
+\resumeItem{Designed and implemented a responsive website.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Distributed Fault-Tolerance Computing}{Sep. 2021 -- Dec. 2021}
+{Coursework}{Moscow, Russia}
+\badges{{C++, Raft, gRPC, Protobuf, Concurrency, Distributed Systems}}
+\resumeItemListStart
+\resumeItem{Implemented Raft for consensus over the tasks for worker nodes.}
+\resumeItem{Got acquainted with the RPC protocol (and, specifically, with gRPC).}
+\resumeItemListEnd
+
+\resumeSubheading
+{Restock Monitor}{Sep. 2017 -- Aug. 2018}
+{School Project}{Moscow, Russia}
+\badges{{Go, REST, Web Scraping, Concurrency, Headless Browsers, UX/UI}}
+\resumeItemListStart
+\resumeItem{Developed a multitask web scrapper for more than 100 websites.}
+\resumeItem{Got used to headless browsers (such as \emph{chromedp}).}
+\resumeItem{Developed a sophisticated web application for controlling the restock monitor.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% ------------------------------------------------------------ %
+
+\section{Accomplishments}
+\resumeSubHeadingListStart
+
+\resumeHeading
+{Second Place in the \textbf{Junction} Hackathon 2021 (\emph{Hybrid Event Experience Gamefied Challenge} by Brella)}{Nov. 2021} \\[-1em]
+
+\resumeHeading
+{Diploma in the Round 2 among University Students of \emph{International Olympiad in Cryptography} \textbf{NSUCRYPTO}}{Oct. 2021} \\[-1em]
+
+\resumeHeading
+{Bronze Medal at \textbf{IMC} \emph{(International Mathematics Competition for University Students) 2021}}{Aug. 2021} \\[-1em]
+
+\resumeSubHeadingListEnd
+
+% ------------------------------------------------------------ %
+
+\section{Skills}
+\resumeSubHeadingListStart
+
+\resumeSmallHeading
+{\textbf{Programming Languages}:\badges{{Go, C, C++, Python, JavaScript/TypeScript, Bash}}}
+
+\resumeSmallHeading
+{\textbf{Databases}:\badges{{MongoDB, PostgreSQL, Redis}}}
+
+\resumeSmallHeading
+{\textbf{Libraries and Frameworks}:\badges{{React, Django, Flask}}}
+
+\resumeSmallHeading
+{\textbf{Misc.}:\badges{{Linux, SQL, HTML/CSS, Docker, Nginx, Firebase, Prometheus, Swagger, Figma}}}
+
+\resumeSmallHeading
+{\textbf{Spoken Languages}:\badges{{Russian (native speaker), English (fluent), Armenian (basic), French (basic), German (basic)}}}
+
+\resumeSubHeadingListEnd
+
+\end{document}
