@@ -1,17 +1,20 @@
 \documentclass[letterpaper]{article}
 
+\usepackage{ulem}
+\usepackage{contour}
 \usepackage{latexsym}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[english]{babel}
 \usepackage[most]{tcolorbox}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[a4paper, margin=0.33in]{geometry}
 
 \raggedright
 \raggedbottom
 \urlstyle{same}
 \setlength{\tabcolsep}{0in}
+\AtBeginDocument{\normalem}
 
 \newlength{\uppercaseHeight}
 \AtBeginDocument{\settoheight{\uppercaseHeight}{A}}
@@ -22,6 +25,15 @@
 
 % Sections formatting
 \titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-5pt}]
+
+% Beautiful underline
+\renewcommand{\ULdepth}{2pt}
+\contourlength{1pt}
+
+\newcommand{\beauline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -35,13 +47,6 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       {\small#3} & \textit{\small #4} \\[.125em]
-    \end{tabular*}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-	\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}
 }
 
@@ -82,7 +87,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
-\newcommand{\link}[2]{\href{#1}{\underline{#2}}}
+\newcommand{\link}[2]{\href{#1}{\beauline{#2}}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -148,11 +153,12 @@
 \resumeItemListEnd
 
 \resumeSubheading
-{Distributed Fault-Tolerance Computing}{Sep. 2021 -- Dec. 2021}
+{\link{https://gitlab.com/senago/abeille}{Distributed Fault-Tolerance Computing}}{Sep. 2021 -- Dec. 2021}
 {Coursework}{Moscow, Russia}
-\badges{{C++, Raft, gRPC, Protobuf, Concurrency, Distributed Systems}}
+\badges{{C, C++, Raft, gRPC, Protobuf, Concurrency, Distributed Systems, IPC}}
 \resumeItemListStart
 \resumeItem{Implemented Raft for consensus over the tasks for worker nodes.}
+\resumeItem{Implemented client and server sides for users and workers (including IPC for worker nodes).}
 \resumeItem{Got acquainted with the RPC protocol (and, specifically, with gRPC).}
 \resumeItemListEnd
 
@@ -174,13 +180,13 @@
 \resumeSubHeadingListStart
 
 \resumeHeading
-{Second Place in the \textbf{Junction} Hackathon 2021 (\emph{Hybrid Event Experience Gamefied Challenge} by Brella)}{Nov. 2021} \\[-1em]
+{Second Place in the \textbf{Junction} Hackathon (\emph{Hybrid Event Experience Gamefied} Challenge by Brella)}{Nov. 2021} \\[-1em]
 
 \resumeHeading
-{Diploma in the Round 2 among University Students of \emph{International Olympiad in Cryptography} \textbf{NSUCRYPTO}}{Oct. 2021} \\[-1em]
+{Diploma in the Round 2 among University Students of \textbf{NSUCRYPTO} (\emph{International Olympiad in Cryptography})}{Oct. 2021} \\[-1em]
 
 \resumeHeading
-{Bronze Medal at \textbf{IMC} \emph{(International Mathematics Competition for University Students) 2021}}{Aug. 2021} \\[-1em]
+{Bronze Medal at \textbf{IMC} (\emph{International Mathematics Competition for University Students}) }{Aug. 2021} \\[-1em]
 
 \resumeSubHeadingListEnd
 
