@@ -6,9 +6,15 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[most]{tcolorbox}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-\usepackage[a4paper, margin=0.33in]{geometry}
+\usepackage{hyperref}
+\usepackage[a4paper, margin=0.25in]{geometry}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = RedOrange!85!black,
+}
 
 \raggedright
 \raggedbottom
@@ -24,7 +30,7 @@
 \input{glyphtounicode}
 
 % Sections formatting
-\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-5pt}]
+\titleformat{\section}{\vspace{-9pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-5pt}]
 
 % Beautiful underline
 \renewcommand{\ULdepth}{2pt}
@@ -54,7 +60,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}
+    \end{tabular*} \vspace{-3pt}
 }
 
 \newcommand{\resumeSmallHeading}[1]{
@@ -65,7 +71,7 @@
 \newtcbox{\badge}{
   on line,
   enhanced,
-  arc=4pt,
+  arc=3pt,
   top=2pt,
   left=5pt,
   right=5pt,
@@ -82,7 +88,7 @@
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.125in, label={}]}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-4pt}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -97,10 +103,10 @@
 
 \begin{center}
 	\textbf{\Huge Oganes Mirzoyan} \\[0.5em]
-	\link{https://t.me/senago}{t.me/senago} ~
 	\link{mailto:mirzoyan.oganes@mail.ru}{mirzoyan.oganes@mail.ru} ~
+	\link{https://github.com/senago}{github.com/senago} ~
 	\link{https://gitlab.com/senago}{gitlab.com/senago} ~
-	\link{https://github.com/senago}{github.com/senago}
+	\link{https://t.me/senago}{t.me/senago}
 \end{center}
 
 % ------------------------------------------------------------ %
@@ -113,10 +119,15 @@
 {Specialist of Computer Security}{Moscow, Russia}
 
 \resumeSubheading
-{VK Technology Park}{Sep. 2021 - May 2023}
+{Yandex School of Data Analysis}{Sep. 2022 - May 2024}
+{Big Data Infrastructure}{Moscow, Russia}
+\badges{{Rust, C++, Algorithms and Data Structures, Computer Architecture and Operating Systems}}
+
+\resumeSubheading
+{VK Technology Park}{Sep. 2021 - May 2022}
 {Systems Architect}{Moscow, Russia}
 \badges{{C, C++, Algorithms and Data Structures, Computer Networks, Concurrency, Distributed Systems}}\\
-\badges{{Databases, Go, Communication Skills, UX/UI}}
+\badges{{Databases, Go, Frontend Development, Communication Skills, UX/UI}}
 
 \resumeSubHeadingListEnd
 
@@ -124,6 +135,11 @@
 
 \section{Experience}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+{Bank Development}{July 2022 -- Present}
+{Internship at \link{https://corp.ozon.com/}{Ozon Fintech}}{Moscow, Russia}
+\badges{{Finance, Billing, Go, Microservices, Kubernetes, Kafka, PostgreSQL, SRE}}
 
 \resumeSubheading
 {Distributed Document-Oriented Service}{July 2021 -- Sep. 2021}
@@ -145,17 +161,17 @@
 \resumeSubheading
 {Social Network}{Feb. 2022 -- May. 2022}
 {Coursework}{Moscow, Russia}
-\badges{{Go, Microservices, TypeScript, JSX}}
+\badges{{Go, Microservices, TypeScript}}
 \resumeItemListStart
 \resumeItem{Implemented API for a social network service.}
-\resumeItem{Built a React-like framework in TypeScript from scratch with jsx and hooks.}
+\resumeItem{Built a React-like framework in TypeScript from scratch with jsx and hooks - \link{https://github.com/senago/treact}{github.com/senago/treact}.}
 \resumeItem{Designed and implemented a responsive website.}
 \resumeItemListEnd
 
 \resumeSubheading
-{\link{https://gitlab.com/senago/abeille}{Distributed Fault-Tolerance Computing}}{Sep. 2021 -- Dec. 2021}
-{Coursework}{Moscow, Russia}
-\badges{{C, C++, Raft, gRPC, Protobuf, Concurrency, Distributed Systems, IPC}}
+{Distributed Fault-Tolerance Computing}{Sep. 2021 -- Dec. 2021}
+{Coursework $|$ \link{https://gitlab.com/senago/abeille}{gitlab.com/senago/abeille}}{Moscow, Russia}
+\badges{{C, C++, Raft, gRPC, Concurrency, Distributed Systems, IPC}}
 \resumeItemListStart
 \resumeItem{Implemented Raft for consensus over the tasks for worker nodes.}
 \resumeItem{Implemented client and server sides for users and workers (including IPC for worker nodes).}
@@ -180,13 +196,16 @@
 \resumeSubHeadingListStart
 
 \resumeHeading
-{Second Place in the \textbf{Junction} Hackathon (\emph{Hybrid Event Experience Gamefied} Challenge by Brella)}{Nov. 2021} \\[-1em]
+{Silver Medal at \textbf{IMC 2022}}{Aug. 2022}
 
 \resumeHeading
-{Diploma in the Round 2 among University Students of \textbf{NSUCRYPTO} (\emph{International Olympiad in Cryptography})}{Oct. 2021} \\[-1em]
+{Second Place in the \textbf{Junction} Hackathon (\emph{Hybrid Event Experience Gamefied} Challenge by Brella)}{Nov. 2021}
 
 \resumeHeading
-{Bronze Medal at \textbf{IMC} (\emph{International Mathematics Competition for University Students}) }{Aug. 2021} \\[-1em]
+{Diploma in the Round 2 among University Students of \textbf{NSUCRYPTO} (\emph{International Olympiad in Cryptography})}{Oct. 2021}
+
+\resumeHeading
+{Bronze Medal at \textbf{IMC 2021}}{Aug. 2021}
 
 \resumeSubHeadingListEnd
 
@@ -196,26 +215,28 @@
 \resumeSubHeadingListStart
 
 \resumeSmallHeading
-{\textbf{Programming Languages}:\badges{{Go, C, C++, JavaScript/TypeScript, Python, Bash}}}
+{\textbf{Programming Languages}:\badges{{Go, C, C++, Rust, JavaScript/TypeScript, Python, Bash}}}
 
 \resumeSmallHeading
-{\textbf{Databases}:\badges{{MongoDB, PostgreSQL, Redis}}}
+{\textbf{Databases}:\badges{{PostgreSQL, MongoDB, Redis}}}
 
 \resumeSmallHeading
-{\textbf{Libraries and Frameworks}:\badges{{React, Django, Flask}}}
+{\textbf{Technologies}:\badges{{Kafka, gRPC, Protobuf, Docker, Kubernetes, React, Django}}}
 
 \resumeSmallHeading
-{\textbf{Misc.}:\badges{{Linux, SQL, HTML/CSS, Docker, Nginx, Firebase, Protobuf, Prometheus, Swagger, Figma}}}
+{\textbf{Misc.}:\badges{{Linux, SQL, HTML/CSS, Nginx, Prometheus, Swagger, Figma}}}
 
 \resumeSmallHeading
-{\textbf{Spoken Languages}:\badges{{Russian (native speaker), English (fluent), Armenian (basic), French (basic), German (basic)}}}
+{\textbf{Spoken Languages}:\badges{{Russian (native speaker), English (fluent)}}}
 
 \resumeSubHeadingListEnd
 
 \section{Interests}
 \resumeSubHeadingListStart
 
-\resumeSmallHeading{\badges{{Backend Development, Highload and Distributed Systems, Homomorphic Encryption, Abstract Algebra, Cryptography}}}
+\resumeSmallHeading{\badges{{Backend Development, Highload and Distributed Systems, Site Reliability Engineering}}}
+
+\resumeSmallHeading{\badges{{Homomorphic Encryption, Abstract Algebra, Cryptography}}}
 
 \resumeSubHeadingListEnd
 
