@@ -13,7 +13,7 @@
 
 \hypersetup{
   colorlinks = true,
-  urlcolor   = RedOrange!85!black,
+  urlcolor   = RoyalBlue!75!white,
 }
 
 \raggedright
@@ -30,7 +30,7 @@
 \input{glyphtounicode}
 
 % Sections formatting
-\titleformat{\section}{\vspace{-9pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-5pt}]
+\titleformat{\section}{\vspace{-9pt}\scshape\raggedright\large}{}{0em}{}[\color{gray}\titlerule\vspace{-7pt}]
 
 % Beautiful underline
 \renewcommand{\ULdepth}{2pt}
@@ -52,8 +52,8 @@
     \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {\small#3} & \textit{\small #4} \\[.125em]
-    \end{tabular*}
+      {\small#3} & \textit{\small #4} \\[-0.075em]
+    \end{tabular*} \\[-0.05em]
 }
 
 \newcommand{\resumeHeading}[2]{
@@ -78,6 +78,7 @@
   bottom=2pt,
   boxsep=0pt,
   boxrule=0.25pt,
+  colback=white!95!gray,
   enlarge bottom by=2pt,
   fontupper=\scriptsize\badgeStrut\color{black},
 }
@@ -138,7 +139,7 @@
 
 \resumeSubheading
 {Ozon Fintech}{July 2022 -- Present}
-{Software Engineering Intern $|$ Core Banking System}{Moscow, Russia}
+{Junior Software Engineer $|$ Core Banking System}{Moscow, Russia}
 \badges{{Finance, Billing, Go, Microservices, Kubernetes, Kafka, PostgreSQL, SRE}}
 
 \resumeSubheading
@@ -161,10 +162,10 @@
 \resumeSubheading
 {Social Network}{Feb. 2022 -- May. 2022}
 {Coursework}{Moscow, Russia}
-\badges{{Go, Microservices, TypeScript}}
+\badges{{Go, Microservices, TypeScript, UX/UI, Responsive Design}}
 \resumeItemListStart
 \resumeItem{Implemented API for a social network service.}
-\resumeItem{Built a React-like framework in TypeScript from scratch with jsx and hooks - \link{https://github.com/senago/treact}{github.com/senago/treact}.}
+\resumeItem{Built a React-like framework \link{https://github.com/senago/treact}{github.com/senago/treact} in TypeScript from scratch with jsx and hooks.}
 \resumeItem{Designed and implemented a responsive website.}
 \resumeItemListEnd
 
@@ -196,13 +197,19 @@
 \resumeSubHeadingListStart
 
 \resumeHeading
+{Third place in the \textbf{Web3Souls} Hackathon (Web Service for Providing Smart Contracts Audits)}{Dec. 2022}
+
+\resumeHeading
+{Top 10\% (5/61) in the \textbf{Sovcombank Team Challenge 2022} Hackathon (Web Service for Currency Trading)}{Nov. 2022}
+
+\resumeHeading
 {Silver Medal at \textbf{IMC 2022}}{Aug. 2022}
 
 \resumeHeading
-{Second Place in the \textbf{Junction} Hackathon (\emph{Hybrid Event Experience Gamefied} Challenge by Brella)}{Nov. 2021}
+{Second Place in the \textbf{Junction} Hackathon (Hybrid Event Experience Gamefied Challenge by Brella)}{Nov. 2021}
 
 \resumeHeading
-{Diploma in the Round 2 among University Students of \textbf{NSUCRYPTO} (\emph{International Olympiad in Cryptography})}{Oct. 2021}
+{Diploma in the Round 2 among University Students of \textbf{NSUCRYPTO} (International Olympiad in Cryptography)}{Oct. 2021}
 
 \resumeHeading
 {Bronze Medal at \textbf{IMC 2021}}{Aug. 2021}
@@ -221,10 +228,10 @@
 {\textbf{Databases}:\badges{{PostgreSQL, MongoDB, ClickHouse, Redis}}}
 
 \resumeSmallHeading
-{\textbf{Technologies}:\badges{{Kafka, gRPC, Protobuf, Docker, Kubernetes, React, Django}}}
+{\textbf{Technologies}:\badges{{Kafka, gRPC, Protobuf, Docker, Kubernetes, React, Django, Svelte}}}
 
 \resumeSmallHeading
-{\textbf{Misc.}:\badges{{Linux, SQL, GraphQL, HTML/CSS, Nginx, Prometheus, Swagger, Figma}}}
+{\textbf{Misc.}:\badges{{Linux, SQL, GraphQL, HTML/CSS, Nginx, Prometheus, Grafana, Swagger, Figma}}}
 
 \resumeSmallHeading
 {\textbf{Spoken Languages}:\badges{{Russian (native speaker), English (fluent)}}}
